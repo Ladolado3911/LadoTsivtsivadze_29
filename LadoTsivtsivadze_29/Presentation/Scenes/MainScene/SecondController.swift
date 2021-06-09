@@ -10,16 +10,17 @@ import UIKit
 class SecondController: UIViewController {
     
     @IBOutlet weak var imgView: newImage!
+    @IBOutlet weak var coordinates: UILabel!
+    
     var gesture: GestureType?
     var gestureObject: Gesture?
-    
-    var isLabelVisible: Bool = false
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         imgView.isUserInteractionEnabled = true
+        coordinates.isHidden = true
     }
     
 
@@ -33,7 +34,7 @@ class SecondController: UIViewController {
                                         controller: self,
                                         action: #selector(panAction))
                 
-
+                coordinates.isHidden = false
                 imgView.addGestureRecognizer(gestureObject!.pan!)
                 
             case .longPress:
@@ -76,6 +77,8 @@ class SecondController: UIViewController {
         case .none:
             break
         }
+        
+        coordinates.isHidden = true
     }
 }
 
@@ -86,8 +89,11 @@ extension SecondController {
             switch gesture.state {
             case .changed:
                 self.imgView.transform = CGAffineTransform(translationX: translation.x, y: translation.y)
+                self.coordinates.transform = CGAffineTransform(translationX: translation.x, y: translation.y)
+                self.coordinates.text = "x: \(translation.x), y: \(translation.y)"
             case .ended:
                 self.imgView.transform = .identity
+                self.coordinates.transform = .identity
             default:
                 break
             }
@@ -95,6 +101,7 @@ extension SecondController {
     }
     @objc func longPressAction(_ gesture: UILongPressGestureRecognizer) {
         print("longPress")
+        //if gesture.press
     }
     @objc func swipeAction(_ gesture: UISwipeGestureRecognizer) {
         print("swipe")

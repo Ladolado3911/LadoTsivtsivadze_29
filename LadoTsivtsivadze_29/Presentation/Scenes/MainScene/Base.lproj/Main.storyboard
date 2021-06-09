@@ -104,22 +104,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KN4-eq-mvx" customClass="newImage" customModule="LadoTsivtsivadze_29" customModuleProvider="target">
-                                <rect key="frame" x="147" y="388" width="120" height="120"/>
+                                <rect key="frame" x="132" y="373" width="150" height="150"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="RsN-iA-PV7"/>
-                                    <constraint firstAttribute="height" constant="120" id="sfH-gk-0XV"/>
+                                    <constraint firstAttribute="width" constant="150" id="RsN-iA-PV7"/>
+                                    <constraint firstAttribute="height" constant="150" id="sfH-gk-0XV"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajM-sb-4rM">
+                                <rect key="frame" x="186" y="437.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2kD-AH-wji"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ajM-sb-4rM" firstAttribute="centerY" secondItem="KN4-eq-mvx" secondAttribute="centerY" id="VxZ-wv-tJ1"/>
+                            <constraint firstItem="ajM-sb-4rM" firstAttribute="centerX" secondItem="KN4-eq-mvx" secondAttribute="centerX" id="Wgy-2X-w7e"/>
                             <constraint firstItem="KN4-eq-mvx" firstAttribute="centerX" secondItem="b8j-CF-fVw" secondAttribute="centerX" id="XlX-Of-eUa"/>
                             <constraint firstItem="KN4-eq-mvx" firstAttribute="centerY" secondItem="b8j-CF-fVw" secondAttribute="centerY" id="fY7-Wi-43Y"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="coordinates" destination="ajM-sb-4rM" id="3AH-Em-APD"/>
                         <outlet property="imgView" destination="KN4-eq-mvx" id="drl-t4-Q3h"/>
                     </connections>
                 </viewController>
