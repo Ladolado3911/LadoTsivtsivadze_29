@@ -8,49 +8,47 @@
 import UIKit
 
 class MainController: UIViewController {
-
-    @IBOutlet weak var imgView: UIImageView!
+    
+    @IBOutlet weak var uiPanGesture: UILabel!
+    @IBOutlet weak var uiLongPress: UILabel!
+    @IBOutlet weak var uiSwipeGesture: UILabel!
+    @IBOutlet weak var uiPinchGesture: UILabel!
+    
+    lazy var nextController: SecondController = {
+        let vc = getController(storyboardID: .main, controllerID: .second) as? SecondController
+        return vc!
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imgView.isUserInteractionEnabled = true
-        //configTapGesture()
-        configPanGesture()
-        
-        
+        configLabels()
+        configTapGesture()
+        //configPanGesture()
+    }
+    
+    func configLabels() {
+        uiPanGesture.isUserInteractionEnabled = true
+        uiLongPress.isUserInteractionEnabled = true
+        uiSwipeGesture.isUserInteractionEnabled = true
+        uiPinchGesture.isUserInteractionEnabled = true
     }
 
     func configTapGesture() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(tapAction))
-        imgView.addGestureRecognizer(tap)
+        configTapGesture(label: uiPanGesture)
+        configTapGesture(label: uiLongPress)
+        configTapGesture(label: uiSwipeGesture)
+        configTapGesture(label: uiPinchGesture)
     }
     
-    func configPanGesture() {
-        let pan = UIPanGestureRecognizer(target: self, action: #selector(panAction))
-        view.addGestureRecognizer(pan)
+    func configTapGesture(label lbl: UILabel) {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapAction))
+        lbl.addGestureRecognizer(tap)
     }
 }
 
 extension MainController {
     @objc func tapAction(_ gesture: UITapGestureRecognizer) {
-        print("did tap")
-    }
-    
-    @objc func panAction(_ gesture: UIPanGestureRecognizer) {
-        let translation = gesture.translation(in: self.view)
-
-        switch gesture.state {
-        case .began:
-            print("begin")
-        case .changed:
-            self.imgView.transform = CGAffineTransform(translationX: translation.x, y: translation.y)
-        case .ended:
-            UIView.animate(withDuration: 0.3) {
-                self.imgView.transform = .identity
-            }
-        default:
-            break
-        }
+        pushController(from: self, to: nextController, method: .withBackItem)
     }
 }
 

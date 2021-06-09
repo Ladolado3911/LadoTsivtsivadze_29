@@ -15,6 +15,7 @@
 		3F93A78A2670CCAB00341ECB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F93A7882670CCAB00341ECB /* LaunchScreen.storyboard */; };
 		3F93A79F2670CDA300341ECB /* IDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F93A79D2670CDA300341ECB /* IDs.swift */; };
 		3F93A7A02670CDA300341ECB /* ControllerHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F93A79E2670CDA300341ECB /* ControllerHelpers.swift */; };
+		3F93A7A62670E18B00341ECB /* SecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F93A7A52670E18B00341ECB /* SecondController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		3F93A78B2670CCAB00341ECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F93A79D2670CDA300341ECB /* IDs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDs.swift; sourceTree = "<group>"; };
 		3F93A79E2670CDA300341ECB /* ControllerHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerHelpers.swift; sourceTree = "<group>"; };
+		3F93A7A52670E18B00341ECB /* SecondController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			children = (
 				3F93A7812670CCA900341ECB /* MainController.swift */,
 				3F93A7832670CCA900341ECB /* Main.storyboard */,
+				3F93A7A52670E18B00341ECB /* SecondController.swift */,
 			);
 			path = MainScene;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				3F93A7A02670CDA300341ECB /* ControllerHelpers.swift in Sources */,
 				3F93A79F2670CDA300341ECB /* IDs.swift in Sources */,
 				3F93A7822670CCA900341ECB /* MainController.swift in Sources */,
+				3F93A7A62670E18B00341ECB /* SecondController.swift in Sources */,
 				3F93A77E2670CCA900341ECB /* AppDelegate.swift in Sources */,
 				3F93A7802670CCA900341ECB /* SceneDelegate.swift in Sources */,
 			);

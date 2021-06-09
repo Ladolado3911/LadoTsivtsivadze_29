@@ -10,6 +10,7 @@ import UIKit
 
 enum ControllerID: String {
     case main = "MainController"
+    case second = "SecondController"
 }
 
 enum StoryboardID: String {
