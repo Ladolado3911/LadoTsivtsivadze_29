@@ -57,12 +57,12 @@ class SecondController: UIViewController {
                 imgView.addGestureRecognizer(swipeLeft)
                 
                 let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction))
-                swipeLeft.direction = .up
+                swipeUp.direction = .up
                 imgView.addGestureRecognizer(swipeUp)
                 
                 
                 let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction))
-                swipeLeft.direction = .down
+                swipeDown.direction = .down
                 imgView.addGestureRecognizer(swipeDown)
          
             case .pinch:
@@ -79,6 +79,7 @@ class SecondController: UIViewController {
         super.viewWillDisappear(animated)
         imgView.gestureRecognizers!.forEach(imgView.removeGestureRecognizer(_:))
         coordinates.isHidden = true
+        
     }
 }
 
@@ -104,10 +105,60 @@ extension SecondController {
         print("longPress")
     }
     
-    @objc func swipeAction(_ gestureRight: UISwipeGestureRecognizer) {
-        print(gestureRight.direction)
+    @objc func swipeAction(_ gesture: UISwipeGestureRecognizer) {
+        let increment = CGFloat(50)
+        let duration = 0.2
+        switch gesture.direction {
+        case .right:
+            UIView.animate(withDuration: duration) { [self] in
+                let newRect = CGRect(x: imgView.frame.minX + increment,
+                                     y: imgView.frame.minY,
+                                     width: imgView.frame.width,
+                                     height: imgView.frame.height)
+                imgView.frame = newRect
+            }
+
+        case .left:
+            UIView.animate(withDuration: duration) { [self] in
+                let newRect = CGRect(x: imgView.frame.minX - increment,
+                                     y: imgView.frame.minY,
+                                     width: imgView.frame.width,
+                                     height: imgView.frame.height)
+                imgView.frame = newRect
+            }
+        case .up:
+            UIView.animate(withDuration: duration) { [self] in
+                let newRect = CGRect(x: imgView.frame.minX,
+                                     y: imgView.frame.minY - increment,
+                                     width: imgView.frame.width,
+                                     height: imgView.frame.height)
+                imgView.frame = newRect
+            }
+            
+        case .down:
+            UIView.animate(withDuration: duration) { [self] in
+                let newRect = CGRect(x: imgView.frame.minX,
+                                     y: imgView.frame.minY + increment,
+                                     width: imgView.frame.width,
+                                     height: imgView.frame.height)
+                imgView.frame = newRect
+            }
+            
+        default:
+            break
+        }
     }
     @objc func pinchAction(_ gesture: UIPinchGestureRecognizer) {
-        print("pinch")
+        UIView.animate(withDuration: 0.3) {
+            switch gesture.state {
+            case .changed:
+                self.imgView.transform = CGAffineTransform(scaleX: gesture.scale, y: gesture.scale)
+                if self.imgView.frame.width > self.view.frame.width || self.imgView.frame.height > self.view.frame.height {
+                    self.imgView.transform = .identity
+                }
+            default:
+                break
+            }
+        }
     }
 }
