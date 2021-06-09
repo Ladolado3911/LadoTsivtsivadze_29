@@ -9,10 +9,10 @@ import UIKit
 
 class MainController: UIViewController {
     
-    @IBOutlet weak var uiPanGesture: UILabel!
-    @IBOutlet weak var uiLongPress: UILabel!
-    @IBOutlet weak var uiSwipeGesture: UILabel!
-    @IBOutlet weak var uiPinchGesture: UILabel!
+    @IBOutlet weak var uiPanGesture: NewLabel!
+    @IBOutlet weak var uiLongPress: NewLabel!
+    @IBOutlet weak var uiSwipeGesture: NewLabel!
+    @IBOutlet weak var uiPinchGesture: NewLabel!
     
     lazy var nextController: SecondController = {
         let vc = getController(storyboardID: .main, controllerID: .second) as? SecondController
@@ -28,9 +28,16 @@ class MainController: UIViewController {
     
     func configLabels() {
         uiPanGesture.isUserInteractionEnabled = true
+        uiPanGesture.gestureType = .pan
+        
         uiLongPress.isUserInteractionEnabled = true
+        uiLongPress.gestureType = .longPress
+        
         uiSwipeGesture.isUserInteractionEnabled = true
+        uiSwipeGesture.gestureType = .swipe
+        
         uiPinchGesture.isUserInteractionEnabled = true
+        uiPinchGesture.gestureType = .pinch
     }
 
     func configTapGesture() {
@@ -48,6 +55,9 @@ class MainController: UIViewController {
 
 extension MainController {
     @objc func tapAction(_ gesture: UITapGestureRecognizer) {
+        let type = (gesture.view as? NewLabel)!.gestureType!
+        let vc = nextController
+        vc.gesture = type
         pushController(from: self, to: nextController, method: .withBackItem)
     }
 }

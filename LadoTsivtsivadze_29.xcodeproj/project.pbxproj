@@ -16,6 +16,8 @@
 		3F93A79F2670CDA300341ECB /* IDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F93A79D2670CDA300341ECB /* IDs.swift */; };
 		3F93A7A02670CDA300341ECB /* ControllerHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F93A79E2670CDA300341ECB /* ControllerHelpers.swift */; };
 		3F93A7A62670E18B00341ECB /* SecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F93A7A52670E18B00341ECB /* SecondController.swift */; };
+		3F93A7AA2670E69900341ECB /* GestureRecognizers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F93A7A92670E69900341ECB /* GestureRecognizers.swift */; };
+		3F93A7AD2670EA1900341ECB /* uiLabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F93A7AC2670EA1900341ECB /* uiLabel+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		3F93A79D2670CDA300341ECB /* IDs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDs.swift; sourceTree = "<group>"; };
 		3F93A79E2670CDA300341ECB /* ControllerHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerHelpers.swift; sourceTree = "<group>"; };
 		3F93A7A52670E18B00341ECB /* SecondController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondController.swift; sourceTree = "<group>"; };
+		3F93A7A92670E69900341ECB /* GestureRecognizers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureRecognizers.swift; sourceTree = "<group>"; };
+		3F93A7AC2670EA1900341ECB /* uiLabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "uiLabel+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 				3F93A7812670CCA900341ECB /* MainController.swift */,
 				3F93A7832670CCA900341ECB /* Main.storyboard */,
 				3F93A7A52670E18B00341ECB /* SecondController.swift */,
+				3F93A7A92670E69900341ECB /* GestureRecognizers.swift */,
 			);
 			path = MainScene;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 		3F93A79B2670CD5400341ECB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				3F93A7AC2670EA1900341ECB /* uiLabel+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -202,6 +208,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F93A7AD2670EA1900341ECB /* uiLabel+Extension.swift in Sources */,
+				3F93A7AA2670E69900341ECB /* GestureRecognizers.swift in Sources */,
 				3F93A7A02670CDA300341ECB /* ControllerHelpers.swift in Sources */,
 				3F93A79F2670CDA300341ECB /* IDs.swift in Sources */,
 				3F93A7822670CCA900341ECB /* MainController.swift in Sources */,

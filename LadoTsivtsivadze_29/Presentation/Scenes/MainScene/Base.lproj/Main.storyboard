@@ -19,7 +19,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PMc-Bl-N8o">
                                 <rect key="frame" x="20" y="240" width="374" height="522"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UIPanGestureRecognizer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7g6-Ir-0p6">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UIPanGestureRecognizer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7g6-Ir-0p6" customClass="NewLabel" customModule="LadoTsivtsivadze_29" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <constraints>
@@ -29,7 +29,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UILongPressGestureRecognizer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84P-Lj-6cc">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UILongPressGestureRecognizer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84P-Lj-6cc" customClass="NewLabel" customModule="LadoTsivtsivadze_29" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="157.5" width="374" height="50"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <constraints>
@@ -39,7 +39,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UISwipeGestureRecognizer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jO6-9I-9RE">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UISwipeGestureRecognizer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jO6-9I-9RE" customClass="NewLabel" customModule="LadoTsivtsivadze_29" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="314.5" width="374" height="50"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <constraints>
@@ -49,7 +49,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UIPinchGestureRecognizer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgR-s6-KrY">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UIPinchGestureRecognizer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgR-s6-KrY" customClass="NewLabel" customModule="LadoTsivtsivadze_29" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="472" width="374" height="50"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <constraints>
