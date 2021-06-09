@@ -41,17 +41,30 @@ class SecondController: UIViewController {
                 gestureObject = Gesture(gestureType: gesture,
                                         controller: self,
                                         action: #selector(longPressAction))
-
+                gestureObject!.longPress!.minimumPressDuration = 1
                 imgView.addGestureRecognizer(gestureObject!.longPress!)
                 
             case .swipe:
                 gestureObject = Gesture(gestureType: gesture,
                                         controller: self,
                                         action: #selector(swipeAction))
-
+                
+                gestureObject!.swipe!.direction = .right
                 imgView.addGestureRecognizer(gestureObject!.swipe!)
                 
+                let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction))
+                swipeLeft.direction = .left
+                imgView.addGestureRecognizer(swipeLeft)
                 
+                let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction))
+                swipeLeft.direction = .up
+                imgView.addGestureRecognizer(swipeUp)
+                
+                
+                let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction))
+                swipeLeft.direction = .down
+                imgView.addGestureRecognizer(swipeDown)
+         
             case .pinch:
                 gestureObject = Gesture(gestureType: gesture,
                                         controller: self,
@@ -64,20 +77,7 @@ class SecondController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
-        switch gesture {
-        case .pan:
-            imgView.removeGestureRecognizer(gestureObject!.pan!)
-        case .longPress:
-            imgView.removeGestureRecognizer(gestureObject!.longPress!)
-        case .swipe:
-            imgView.removeGestureRecognizer(gestureObject!.swipe!)
-        case .pinch:
-            imgView.removeGestureRecognizer(gestureObject!.pinch!)
-        case .none:
-            break
-        }
-        
+        imgView.gestureRecognizers!.forEach(imgView.removeGestureRecognizer(_:))
         coordinates.isHidden = true
     }
 }
@@ -99,12 +99,13 @@ extension SecondController {
             }
         }
     }
+    
     @objc func longPressAction(_ gesture: UILongPressGestureRecognizer) {
         print("longPress")
-        //if gesture.press
     }
-    @objc func swipeAction(_ gesture: UISwipeGestureRecognizer) {
-        print("swipe")
+    
+    @objc func swipeAction(_ gestureRight: UISwipeGestureRecognizer) {
+        print(gestureRight.direction)
     }
     @objc func pinchAction(_ gesture: UIPinchGestureRecognizer) {
         print("pinch")
