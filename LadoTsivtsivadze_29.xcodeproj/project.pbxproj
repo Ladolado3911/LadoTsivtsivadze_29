@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		3F93A77E2670CCA900341ECB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F93A77D2670CCA900341ECB /* AppDelegate.swift */; };
 		3F93A7802670CCA900341ECB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F93A77F2670CCA900341ECB /* SceneDelegate.swift */; };
-		3F93A7822670CCA900341ECB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F93A7812670CCA900341ECB /* ViewController.swift */; };
+		3F93A7822670CCA900341ECB /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F93A7812670CCA900341ECB /* MainController.swift */; };
 		3F93A7852670CCA900341ECB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F93A7832670CCA900341ECB /* Main.storyboard */; };
 		3F93A7872670CCAB00341ECB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F93A7862670CCAB00341ECB /* Assets.xcassets */; };
 		3F93A78A2670CCAB00341ECB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F93A7882670CCAB00341ECB /* LaunchScreen.storyboard */; };
+		3F93A79F2670CDA300341ECB /* IDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F93A79D2670CDA300341ECB /* IDs.swift */; };
+		3F93A7A02670CDA300341ECB /* ControllerHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F93A79E2670CDA300341ECB /* ControllerHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3F93A77A2670CCA900341ECB /* LadoTsivtsivadze_29.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LadoTsivtsivadze_29.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F93A77D2670CCA900341ECB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F93A77F2670CCA900341ECB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3F93A7812670CCA900341ECB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3F93A7812670CCA900341ECB /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		3F93A7842670CCA900341ECB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F93A7862670CCAB00341ECB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F93A7892670CCAB00341ECB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F93A78B2670CCAB00341ECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F93A79D2670CDA300341ECB /* IDs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDs.swift; sourceTree = "<group>"; };
+		3F93A79E2670CDA300341ECB /* ControllerHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,73 @@
 		3F93A77C2670CCA900341ECB /* LadoTsivtsivadze_29 */ = {
 			isa = PBXGroup;
 			children = (
-				3F93A77D2670CCA900341ECB /* AppDelegate.swift */,
-				3F93A77F2670CCA900341ECB /* SceneDelegate.swift */,
-				3F93A7812670CCA900341ECB /* ViewController.swift */,
-				3F93A7832670CCA900341ECB /* Main.storyboard */,
+				3F93A79A2670CD4B00341ECB /* Infrastructure */,
+				3F93A7962670CCE600341ECB /* Presentation */,
+				3F93A7932670CCBD00341ECB /* App */,
 				3F93A7862670CCAB00341ECB /* Assets.xcassets */,
 				3F93A7882670CCAB00341ECB /* LaunchScreen.storyboard */,
 				3F93A78B2670CCAB00341ECB /* Info.plist */,
 			);
 			path = LadoTsivtsivadze_29;
+			sourceTree = "<group>";
+		};
+		3F93A7932670CCBD00341ECB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3F93A77D2670CCA900341ECB /* AppDelegate.swift */,
+				3F93A77F2670CCA900341ECB /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		3F93A7952670CCC700341ECB /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				3F93A7972670CCEF00341ECB /* MainScene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		3F93A7962670CCE600341ECB /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				3F93A7952670CCC700341ECB /* Scenes */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		3F93A7972670CCEF00341ECB /* MainScene */ = {
+			isa = PBXGroup;
+			children = (
+				3F93A7812670CCA900341ECB /* MainController.swift */,
+				3F93A7832670CCA900341ECB /* Main.storyboard */,
+			);
+			path = MainScene;
+			sourceTree = "<group>";
+		};
+		3F93A79A2670CD4B00341ECB /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				3F93A79C2670CD6C00341ECB /* Helpers */,
+				3F93A79B2670CD5400341ECB /* Extensions */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		3F93A79B2670CD5400341ECB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3F93A79C2670CD6C00341ECB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3F93A79E2670CDA300341ECB /* ControllerHelpers.swift */,
+				3F93A79D2670CDA300341ECB /* IDs.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +199,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F93A7822670CCA900341ECB /* ViewController.swift in Sources */,
+				3F93A7A02670CDA300341ECB /* ControllerHelpers.swift in Sources */,
+				3F93A79F2670CDA300341ECB /* IDs.swift in Sources */,
+				3F93A7822670CCA900341ECB /* MainController.swift in Sources */,
 				3F93A77E2670CCA900341ECB /* AppDelegate.swift in Sources */,
 				3F93A7802670CCA900341ECB /* SceneDelegate.swift in Sources */,
 			);
@@ -296,7 +360,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "lado.LadoTsivtsivadze-29";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +379,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "lado.LadoTsivtsivadze-29";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
