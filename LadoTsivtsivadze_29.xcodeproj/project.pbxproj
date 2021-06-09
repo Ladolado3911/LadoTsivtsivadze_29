@@ -18,6 +18,7 @@
 		3F93A7A62670E18B00341ECB /* SecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F93A7A52670E18B00341ECB /* SecondController.swift */; };
 		3F93A7AA2670E69900341ECB /* GestureRecognizers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F93A7A92670E69900341ECB /* GestureRecognizers.swift */; };
 		3F93A7AD2670EA1900341ECB /* uiLabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F93A7AC2670EA1900341ECB /* uiLabel+Extension.swift */; };
+		3F93A7B02670F4AE00341ECB /* uiImgView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F93A7AF2670F4AE00341ECB /* uiImgView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		3F93A7A52670E18B00341ECB /* SecondController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondController.swift; sourceTree = "<group>"; };
 		3F93A7A92670E69900341ECB /* GestureRecognizers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureRecognizers.swift; sourceTree = "<group>"; };
 		3F93A7AC2670EA1900341ECB /* uiLabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "uiLabel+Extension.swift"; sourceTree = "<group>"; };
+		3F93A7AF2670F4AE00341ECB /* uiImgView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "uiImgView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				3F93A7AC2670EA1900341ECB /* uiLabel+Extension.swift */,
+				3F93A7AF2670F4AE00341ECB /* uiImgView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			files = (
 				3F93A7AD2670EA1900341ECB /* uiLabel+Extension.swift in Sources */,
 				3F93A7AA2670E69900341ECB /* GestureRecognizers.swift in Sources */,
+				3F93A7B02670F4AE00341ECB /* uiImgView+Extension.swift in Sources */,
 				3F93A7A02670CDA300341ECB /* ControllerHelpers.swift in Sources */,
 				3F93A79F2670CDA300341ECB /* IDs.swift in Sources */,
 				3F93A7822670CCA900341ECB /* MainController.swift in Sources */,
