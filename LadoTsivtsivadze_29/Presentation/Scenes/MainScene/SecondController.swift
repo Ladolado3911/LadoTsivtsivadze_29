@@ -14,6 +14,9 @@ class SecondController: UIViewController {
     
     var gesture: GestureType?
     var gestureObject: Gesture?
+    
+    var timer: Timer?
+    var counter: Double = 0.0
 
     
     override func viewDidLoad() {
@@ -41,7 +44,7 @@ class SecondController: UIViewController {
                 gestureObject = Gesture(gestureType: gesture,
                                         controller: self,
                                         action: #selector(longPressAction))
-                gestureObject!.longPress!.minimumPressDuration = 1
+                gestureObject!.longPress!.minimumPressDuration = 0.1
                 imgView.addGestureRecognizer(gestureObject!.longPress!)
                 
             case .swipe:
@@ -103,6 +106,27 @@ extension SecondController {
     
     @objc func longPressAction(_ gesture: UILongPressGestureRecognizer) {
         print("longPress")
+        switch gesture.state {
+        case .began:
+            //timer starts
+            timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (timer) in
+                self.counter += 0.1
+                print(self.counter)
+            }
+        case .ended:
+            //timer finished
+            timer!.invalidate()
+            print("counter = \(counter)")
+            if counter < 1 {
+                popController(from: self, method: .withBackItem)
+            }
+            else {
+                print("Normal Long Press")
+            }
+            counter = 0.0
+        default:
+            break
+        }
     }
     
     @objc func swipeAction(_ gesture: UISwipeGestureRecognizer) {
